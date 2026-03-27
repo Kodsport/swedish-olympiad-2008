@@ -1,0 +1,26 @@
+\problemname{Vote Buying}
+
+Karl-Gunnar is running for chairman of his sports club and does not want to risk losing the vote.
+He has managed to find out which candidate each member intends to vote for and plans to simply bribe a number of members so that they vote for him instead. Write a program that computes how many votes must be bought (i.e., members that need to be bribed) for Karl-Gunnar to win the vote. To win, one must receive more votes than each of the other candidates.
+
+\section*{Input}
+The first line contains the integer $n$ ($1 \le n \le 20$), the number of candidates.
+
+The second line contains $n$ integers (between $0$ and $1000$): the number of votes each candidate would receive without bribes.
+The first number indicates Karl-Gunnar's votes.
+
+\section*{Output}
+
+Output a single integer: the minimum number of votes that need to be bought for Karl-Gunnar to receive more votes than each of the other candidates.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $40$       & $n \leq 10$ and all candidates have at most 10 votes. \\ \hline
+  $2$    & $60$       & No additional constraints. \\ \hline
+\end{tabular}
