@@ -1,0 +1,36 @@
+\problemname{Building Pyramids}
+
+\begin{figure}[h!]
+\centering
+    \includegraphics[width=0.6\textwidth]{pyramid.png}
+\caption{An example pyramid of height $3$ with $35$ blocks.}
+\label{fig:pyramid}
+\end{figure}
+
+When initiating a larger project, like building a pyramid, it's best to think twice.
+Your task today is to write a program that computes how high a pyramid can be built given a certain number of blocks of stone.
+
+We assume that the pyramid to be built is compact, i.e. there are no cavities inside.
+Furthermore, we assume it is built according to the principle in Figure~\ref{fig:pyramid}.
+Each layer is square, with a side length that is two blocks less than that of the layer below it.
+The top layer always consists of a single block.
+
+It is fine if you have leftover blocks, as long as you build a complete pyramid.
+
+\section*{Input}
+The first and only line of input contains an integer $N$ ($1 \le N \le 100\,000\,000$), the number of blocks you have available.
+
+\section*{Output}
+Print an integer: the maximum height of a pyramid that can be built with at most $N$ blocks.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $33$        & There will be no leftover blocks after building the pyramid. \\ \hline
+  $2$    & $67$        & No additional constraints. \\ \hline
+\end{tabular}
