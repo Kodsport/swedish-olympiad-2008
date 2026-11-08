@@ -1,0 +1,27 @@
+% Shared drawing for the round robin figure (first three rounds, n = 8).
+% Each language wrapper turnering-<lang>.tex defines \roundname{k} (the
+% caption under round k) and then \input's this file.
+% Black strokes only, no fills: Kattis inverts figures in dark mode, and
+% unfilled line art on a transparent background inverts cleanly.
+\begin{tikzpicture}[line width=0.8pt, font=\sffamily]
+  % Each seat is a circle whose center lies 0.18 outside the table edge; only
+  % the part outside the table is drawn (asin(0.18/0.33) = 33.06 degrees).
+  % \roundtable{x offset}{top row, left to right}{bottom row, left to right}{round}
+  \newcommand\roundtable[4]{
+    \begin{scope}[xshift=#1cm]
+      \draw (0,0) rectangle (4,1.1);
+      \foreach \p [count=\i] in {#2} {
+        \draw ({\i-0.5},1.28) ++(-33.06:0.33) arc[start angle=-33.06, end angle=213.06, radius=0.33];
+        \node at ({\i-0.5},1.28) {\p};
+      }
+      \foreach \p [count=\i] in {#3} {
+        \draw ({\i-0.5},-0.18) ++(33.06:0.33) arc[start angle=33.06, end angle=-213.06, radius=0.33];
+        \node at ({\i-0.5},-0.18) {\p};
+      }
+      \node[font=\sffamily\bfseries] at (2,-1.0) {\roundname{#4}};
+    \end{scope}
+  }
+  \roundtable{0}{1,2,3,4}{8,7,6,5}{1}
+  \roundtable{5.2}{7,1,2,3}{8,6,5,4}{2}
+  \roundtable{10.4}{6,7,1,2}{8,5,4,3}{3}
+\end{tikzpicture}

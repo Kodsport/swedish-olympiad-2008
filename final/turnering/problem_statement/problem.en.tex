@@ -1,0 +1,22 @@
+\problemname{Tournament}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.9\textwidth]{img/turnering-en.pdf}
+\end{figure}
+
+If you want to organize, for example, a table hockey tournament where everyone plays against everyone, you can use a practical rotation scheme called \emph{round robin}.
+The players, numbered from $1$ to $n$, sit around a table (we assume that the number of players $n$ is even), and each player plays against the player sitting directly across the table.
+When a round is over, every player moves one seat clockwise, except the player in the lower left corner, who stays put and is skipped over (hence the name: you move ``round Robin'', Robin being the last player).
+With this rotation scheme, everyone is guaranteed to have played everyone else exactly once after $n-1$ rounds.
+
+Your task is to write a program that prints which players play against each other in a given round.
+
+\section*{Input}
+The input consists of a single line with two integers $n$ and $k$ ($2 \leq n \leq 100$, $1 \leq k \leq n-1$, $n$ is even),
+the number of players in the tournament and the round.
+
+\section*{Output}
+Print $n/2$ lines describing who plays against whom in round $k$.
+Each line should be of the form \texttt{a-b}, where $a$ and $b$ are the numbers of two players who play against each other.
+The matches may be printed in any order.
